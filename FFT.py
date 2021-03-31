@@ -3,7 +3,7 @@ import numpy as np
 import serial
 import time
 
-Fs = 100.0;  # sampling rate
+Fs = 500.0;  # sampling rate
 Ts = 1.0/Fs; # sampling interval
 t = np.arange(0,1,Ts) # time vector; create Fs samples between 0 and 1.0 sec.
 y = np.arange(0,1,Ts) # signal vector; create Fs samples
@@ -11,7 +11,7 @@ y = np.arange(0,1,Ts) # signal vector; create Fs samples
 n = len(y) # length of the signal
 k = np.arange(n)
 T = n/Fs
-frq = k/T # a vector of frequencies; two sides frequency range
+frq = k/T # a vector of frequencies; two sides frequency rang5
 frq = frq[range(int(n/2))] # one side frequency range
 
 serdev = '/dev/ttyACM0'
